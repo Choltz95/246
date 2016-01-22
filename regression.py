@@ -25,7 +25,7 @@ def preparse(data):
     y_mat = np.array(y,dtype = int) # convert our target to vector
     return X_mat, y_mat
 
-def compute_model(X, y, l = 1):
+def compute_model(X, y, l = 0.01):
     n_col = X.shape[1]
     f = np.linalg.lstsq(X.T.dot(X) + l * np.identity(n_col), np.squeeze(np.asarray(X.T.dot(y)))) # Regularized linear regression w/ normal equation
     return f
