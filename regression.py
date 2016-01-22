@@ -25,7 +25,7 @@ def preparse(data):
     y_mat = np.array(y,dtype = int) # convert our target to vector
     return X_mat, y_mat
 
-def compute_model(X, y, l = 0.01):
+def compute_model(X, y, l = 78): # acceptable lambda found through manual experimentation with .dev set
     n_col = X.shape[1]
     f = np.linalg.lstsq(X.T.dot(X) + l * np.identity(n_col), np.squeeze(np.asarray(X.T.dot(y)))) # Regularized linear regression w/ normal equation
     return f
@@ -37,13 +37,13 @@ def main():
 
     f2 = load_file(sys.argv[1])
     X2, y2 = preparse(f2)
-    result = np.squeeze(np.asarray(X2)).dot(W[0]) # compute our result
+    result = np.squeeze(np.asarray(X2)).dot(W[0]) # compute our resultt
 
     correct = 0.0
-    for i in result: # calculate accuracy
-        if i > 0 and y2[i] == 1:
+    for i, r in enumerate(result): # calculate accuracy
+        if r > 0 and y2[i] == 1:
             correct = correct + 1.0
-        if i < 0 and y2[i] == -1:
+        if r < 0 and y2[i] == -1:
             correct = correct + 1.0
 
     print(str(correct) + " correct predictions for " + str(y2.shape[0]) + " points")   

@@ -15,7 +15,7 @@ For this project we implement simple linear regression with normal regularizatio
 python regression.py {your test file}
 
 ************ Results *******
-Results on the dev and test set where good - mid to high 80% accuracy with little to no interraction with the regularization constant lambda.
+Results on the dev and test set where good - mid to high 80% accuracy with little to no interaction with the regularization constant lambda.
 
 ************ Your interpretation *******
 I was not expecting such good accuracy with such a simple classification scheme. With more time I would have liked to further experiment with various lambdas, and perhaps implement a 
