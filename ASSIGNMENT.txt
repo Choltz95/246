@@ -1,0 +1,2 @@
+Homework 2, due Fri 1/22 5pm by turnin script
+Implement linear regression for the adult income dataset using Python. Data available in /u/cs246/data/adult and /u/cs446/data/adult. Take the sign of the output of linear regression as the predicted class label in order to compute the accuracy of your classifier.

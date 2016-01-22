@@ -1,0 +1,59 @@
+Hi everyone,
+
+I guess some of you have already started working on the first machine learning algorithm now. If you haven’t, just hurry up! About the homework, I want to make a few clarifications:
+
+(1) The dataset is a binary classification dataset. Each data point is represented as one row. The first column is the binary class (+1 or -1), the rest columns are binary features that each data point has (123 features in total). The features that have value 1 are written out. For example, 17:1 means the 17-th feature is 1. The features that do not appear have value 0.
+
+The dataset includes three sets: train, dev and test. For the linear regression Homework, you learn the weights from train. They are different for different lambda parameter you try. The dev set is used to try different lambdas and pick the one lambda that performs best on the dev set. Then with the weights and lambda you’ve learned, do one prediction on the test (Remember, just one). Report the process of choosing lambda and the accuracy on dev and test.
+
+(2) The grading criteria:
+1.Correct implementation and descent accuracy (60-70): make sure you implement the algorithm in the correct way, this should include correct training procedure, correct tuning with dev set and prediction on the test set. You should make sure your code is runnable and you can get some descent accuracy with your correct implementation. Good accuracy with incorrect implementation would not be counted as descent accuracy.
+
+**We will run extra test cases using the program you have submitted**. Make sure your program can take one test file as input when running:
+python {Your_homework}.py {extra_test_file_name}
+You can use sys.argv[1] or use python args parser to do this. The output should include two lines:
+x1 correct predictions for x2 points.
+The accuracy is x3.
+x1 is the number of correct predictions, x2 is the total number of test cases. x3=x1/x2, the classification accuracy of your classifier.
+
+Each row of the test case file has the same format as training data, for example:
++1 3:1 6:1 18:1 20:1 37:1 40:1 51:1 63:1 71:1 73:1 74:1 76:1 82:1 83:1
+
+2.Neat documentation (20-30): Try to write neat and clear README files, it’s the clearer the better, not the more the better. Just make it clear what you have done and how you do it. Below is the README template:
+
+Name: {Your Full Name}
+Email: {Your Email}
+Course: {CSC246 or CSC446}
+Homework: {Copy the homework description}
+************ Files *********
+{Describe all files submitted}
+
+************ Algorithm *****
+{Describe your algorithm, using simple math notations}
+
+************ Instructions ***
+{How to run your scripts}
+
+************ Results *******
+{Report the result on dev and test. You should make it clear what’s you parameter selection procedure on the dev set. Don’t report all the console output, do it neat and clean. If you are doing comparison with previous homework, report the previous result on dev and test}
+
+************ Your interpretation *******
+{Analyze the result you have, try to explain how your machine learning algorithm works and the comparison with previous algorithms if required}
+
+************ References ************
+{Any external materials you used for the homework. Anyone you discussed with}
+
+3.Good code style (10): Try to make your code clear and clean, easy to read and well organized. Necessary comments for important blocks of your algorithm.
+
+(3) Turning in homework
+About turning in the homework, there is an executable file TURN_IN under /u/cs246/ or /u/cs446/. Create a homework directory, say HW2. Then copy you code, README to this directory. Run the executable file with the command line:
+
+/u/cs246/TURN_IN HW2 or
+/u/cs446/TURN_IN HW2
+
+Then all you homework files will be submitted and a confirmation will be sent to you.
+
+Good luck!
+
+Best,
+Xiaochang
